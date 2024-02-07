@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="app.js"></script>
+	<title>Encriptador</title>
+</head>
+<body>
+	<header>
+		<div class="separador"></div>
+				<img src="Logo.png">
+		<div class="separador-2"></div>
+		<h2>Encriptador</h2>
+	</header>
+	<section class="seccion-1">
+	<section class="content">
+		<div class="areas-txt">
+			<div class="content-area">
+				<textarea placeholder="Ingresa el texto que desees encriptar :)" id="textoEncriptado" onkeypress="return validar(event)"></textarea>
+				
+				<div class="disclaimer">
+					<img src="mark.png">
+					<p style="margin-bottom: 0; margin-left: 2px;">Solo letras minúsculas, sin acentos ni caracteres especiales</p>
+				</div>
+				<div class="caja-btn">
+					<button type="button" id="botonEncriptado">Encriptar</button>
+				</div>
+			</div>
+			
+			
+		</div>
+
+	</section>
+	<section class="content-2" id="dos">
+		<div class="areas-txt-2">
+			<div class="content-area-2">
+				<textarea name="resultado" id="textoDesencriptado"></textarea>
+				<div class="caja-btn-2">
+					<button type="button" id="botonDesencriptado">Desencriptar</button>
+					<button type="button" id="botonCopia">Copiar</button>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+	</section>
+	<section class="content-3" id="tres">
+		<div class="warning">
+			<img src="warning.png" class="img1">
+			<p>No se ha encontrado ningún mensaje</p>
+			<img src="happy_1818405.png" class="img2">
+		</div>
+		</section>
+	</section>
+	<section>
+		<div class="footer">
+			<small>Lía Cubillos | © Copyright - 2024 </small>
+		</div>
+	</section>
+
+</body>
+<script type="text/javascript">
+	
+	var btn = document.querySelector("#botonEncriptado");
+	btn.onclick = encriptar;
+
+	var btn2 = document.querySelector("#botonDesencriptado");
+	btn2.onclick = desencriptar;
+
+	var btn3 = document.querySelector("#botonCopia");
+	btn3.onclick = copiar;
+</script>
+	
+</script>
+</html>
