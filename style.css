@@ -136,6 +136,17 @@ header img {
   	color: #304568;
 }
 
+#botonDesencriptado {
+	padding: 8px 31px;
+  	font-size: 15px;
+  	border: none;
+  	border-radius: 20px;
+  	background-color: #a7aee6;
+  	color: #304568;
+  	font-weight: bold;
+  	cursor: pointer;
+}
+
 .caja-btn-2 button {
 	padding: 8px 31px;
   	font-size: 15px;
@@ -148,7 +159,7 @@ header img {
   	margin-right: 27px;
 }
 
-.caja-btn-2 button:hover {
+#botonDesencriptado:hover {
 	background-color: #304568;
   color: #fff;
 }
@@ -276,8 +287,8 @@ header img
 }
 
 .warning {
-	width: 82%;
-	margin: 22px;
+	width: 84%;
+	margin: 19px;
 }
 }
 
@@ -301,7 +312,11 @@ header img
 }
 
 .warning {
-	
+	margin: 16px;
+}
+
+#botonDesencriptado {
+	margin-top: 20px;
 }
 
 

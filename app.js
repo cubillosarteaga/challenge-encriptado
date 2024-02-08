@@ -20,14 +20,36 @@ function encriptar () {
  
 
 }
+function SoloLetras(e){
+key = e.keyCode || e.which;
+tecla = String.fromCharCode(key).toString();
+letras = "a b c d e f g h i j k l m n ñ o p q u r s t v w x y z";
 
-function validar(e) { // 1
-    tecla = (document.all) ? e.keyCode : e.which; // 2
-    if (tecla==8) return true; // 3
-    patron =/[A-Za-z\s]/; // 4
-    te = String.fromCharCode(tecla) // 5
-    return patron.test(te); // 6
+especiales = [8,13];
+tecla_especial = false
+for(var i in especiales) {
+if(key == especiales[i]){
+ tecla_especial = true;
+ break;
 }
+}
+
+if(letras.indexOf(tecla) == -1 && !tecla_especial)
+{
+ alert("Ingresar solo letras minúsculas, no ingresar caracteres especiales");
+ return false;
+}
+}
+
+/*function validar(e) {
+    tecla = (document.all) ? e.keyCode : e.which;
+    if (tecla==8) return true;
+    patron =/[A-Za-z\s]/;
+    te = String.fromCharCode(tecla)
+    return patron.test(te);
+}
+
+*/
 
 function desencriptar () {
 	var texto = document.getElementById("textoEncriptado").value;
